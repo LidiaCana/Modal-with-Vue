@@ -1,0 +1,28 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Modal example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="toggleShowModal">Show modal</button>
+        <modal v-show="showModal" v-bind:properties="modalProperty" v-on:close-modal="toggleShowModal">
+            <template v-slot:body-container>
+                <p>Hello modal new</p>
+            </template>
+
+        </modal>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
